@@ -1,0 +1,145 @@
+:root[color-theme="blue"] {
+  --background: rgb(96, 96, 229);
+  --fontColor: #222;
+}
+:root[color-theme="dark"] {
+  --background: #000;
+  --fontColor: #fff;
+}
+html {
+  overflow-x: hidden;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+header {
+  width: 100%;
+  height: 3rem;
+  text-align: right;
+  padding-top: 1rem;
+  padding-right: 3rem;
+  position: fixed;
+}
+header > span {
+  cursor: pointer;
+}
+section {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--background);
+}
+#smallCircle {
+  position: absolute;
+  width: 32rem;
+  height: 32rem;
+  top: -10rem;
+  left: -10rem;
+  opacity: 0.2;
+  border-radius: 50%;
+  background-color: #fff;
+  animation: circle-ani 7s linear forwards infinite;
+}
+#bigCircle {
+  position: absolute;
+  width: 40rem;
+  height: 40rem;
+  bottom: -5rem;
+  right: -18rem;
+  opacity: 0.2;
+  border-radius: 50%;
+  background-color: #fff;
+  animation: big-circle 8s linear forwards infinite;
+}
+@keyframes circle-ani {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(100%, 100%);
+  }
+  50% {
+    transform: translate(200%, 0%);
+  }
+  75% {
+    transform: translate(100%, 100%);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+@keyframes big-circle {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(-100%, -100%);
+  }
+  50% {
+    transform: translate(-200%, 0%);
+  }
+  75% {
+    transform: translate(-100%, -100%);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+.flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flexAlign {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+.flexAlignStart {
+  display: flex;
+  align-items: center;
+}
+
+.flexAlignStart > div {
+  margin-left: 4rem;
+}
+
+.flexAlignStart > div > div {
+  margin-bottom: 1rem;
+}
+
+#projectBox {
+  width: 100%;
+  height: 90vh;
+
+  font-size: 3rem;
+  font-weight: bold;
+  color: var(--fontColor);
+}
+#flexStart {
+  justify-content: center;
+}
+#aboutme {
+  color: var(--fontColor);
+}
+.footer {
+  height: 30%;
+  background-color: #fff;
+}
+.contact {
+  height: 70%;
+}
+#blurheader {
+  z-index: 100;
+  width: 100%;
+  height: 3rem;
+  background-color: #fff;
+  opacity: 0.4;
+  position: fixed;
+  display: none;
+}

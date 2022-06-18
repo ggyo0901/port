@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>포트폴리오</title>
+    <link rel="stylesheet" href="./css/portfolio.css" />
+    <link rel="stylesheet" href="./css/common.css" />
+  </head>
+  <body>
+    <div>
+      <div id="blurheader"></div>
+      <section id="wrap">
+        <header>
+          <span id="darkMode" class="whiteFont bold">DARK</span>
+        </header>
+        <div id="smallCircle" class="whiteBackground"></div>
+        <div class="fontsize15rem whiteFont bold subject">Hi,</div>
+        <div class="fontsize10rem whiteFont bold subject line80">
+          I`M <br />JEONG MIN
+        </div>
+        <div id="bigCircle" class="whiteBackground"></div>
+      </section>
+      <section>
+        <div class="whiteFont fontsize5rem centerTextBox10 bold">
+          JEONG MIN`s PORTFOLIO
+        </div>
+        <div
+          class="bold centerTextBox10 fontsize5rem whiteBackground"
+          id="aboutme"
+        >
+          ABOUT ME
+        </div>
+        <div>
+          <p class="fontsize5rem whiteFont bold subject">SKILLS</p>
+          <div class="flexAlignStart" id="flexStart">
+            <div class="whiteboxWidth whiteBox17rem"></div>
+            <div class="">
+              <div class="whiteboxWidth whiteBox7rem"></div>
+              <div class="whiteboxWidth whiteBox13rem"></div>
+            </div>
+            <div class="whiteboxWidth whiteBox13rem"></div>
+            <div class="whiteboxWidth whiteBox20rem"></div>
+          </div>
+        </div>
+      </section>
+      <section class="flexCenter">
+        <div id="projectBox" class="flexCenter whiteBackground">PROJECT 01</div>
+      </section>
+      <section>
+        <div class="contact whiteFont fontsize5rem bold subject">ContactMe</div>
+        <div class="footer whiteBackground"></div>
+      </section>
+    </div>
+    <script>
+      window.onload = function () {
+        if (
+          document.body.scrollTop > 48 ||
+          document.documentElement.scrollTop > 48
+        ) {
+          document.getElementById("blurheader").style.display = "block";
+        } else {
+          document.getElementById("blurheader").style.display = "none";
+        }
+      };
+      document.documentElement.setAttribute("color-theme", "blue");
+      let dark = document.getElementById("darkMode");
+      dark.addEventListener("click", (e) => {
+        if (e.target.innerText === "DARK") {
+          document.documentElement.setAttribute("color-theme", "dark");
+          e.target.innerText = "BLUE";
+        } else {
+          document.documentElement.setAttribute("color-theme", "blue");
+          e.target.innerText = "DARK";
+        }
+      });
+    </script>
+  </body>
+</html>
